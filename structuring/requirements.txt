@@ -21,3 +21,4 @@ watchfiles==0.16.1
 websockets==10.3
 dnspython==2.2.1
 email-validator==1.3.0
+sqlmodel==0.0.8
