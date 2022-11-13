@@ -8,12 +8,12 @@ from models.users import User
 
 class Settings(BaseSettings):
     DATABASE_URL: Optional[str] = None
+    SECRET_KEY: Optional[str] = None
 
     async def initialize_database(self):
         """
         :return:
         """
-        print("ddd",self.DATABASE_URL)
         client = AsyncIOMotorClient(self.DATABASE_URL)
         await init_beanie(database=client.get_default_database(),
                           document_models=[Event, User])
